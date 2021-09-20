@@ -5,23 +5,23 @@ declare(strict_types=1);
 /*
  * This file is part of the EnumerBundle package.
  *
- * (c) Wakeapp <https://wakeapp.ru>
+ * (c) MarfaTech <https://marfa-tech.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Wakeapp\Bundle\EnumerBundle\DependencyInjection;
+namespace MarfaTech\Bundle\EnumerBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-class WakeappEnumerExtension extends Extension
+class MarfatechEnumerExtension extends Extension
 {
-    public const PARAMETER_SOURCES = 'wakeapp_enumer.source_directories';
-    public const PARAMETER_SOURCE_CLASSES = 'wakeapp_enumer.source_classes';
+    public const PARAMETER_SOURCES = 'marfatech_enumer.source_directories';
+    public const PARAMETER_SOURCE_CLASSES = 'marfatech_enumer.source_classes';
 
     /**
      * {@inheritdoc}

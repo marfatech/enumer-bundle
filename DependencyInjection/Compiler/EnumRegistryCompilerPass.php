@@ -5,21 +5,21 @@ declare(strict_types=1);
 /*
  * This file is part of the EnumerBundle package.
  *
- * (c) Wakeapp <https://wakeapp.ru>
+ * (c) MarfaTech <https://marfa-tech.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Wakeapp\Bundle\EnumerBundle\DependencyInjection\Compiler;
+namespace MarfaTech\Bundle\EnumerBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Finder\Finder;
-use Wakeapp\Bundle\EnumerBundle\DependencyInjection\WakeappEnumerExtension;
-use Wakeapp\Bundle\EnumerBundle\Enum\EnumInterface;
-use Wakeapp\Bundle\EnumerBundle\Registry\EnumRegistryService;
-use Wakeapp\Component\Enumer\EnumRegistry;
+use MarfaTech\Bundle\EnumerBundle\DependencyInjection\MarfatechEnumerExtension;
+use MarfaTech\Bundle\EnumerBundle\Enum\EnumInterface;
+use MarfaTech\Bundle\EnumerBundle\Registry\EnumRegistryService;
+use MarfaTech\Component\Enumer\EnumRegistry;
 use function array_unique;
 use function get_declared_classes;
 use function is_subclass_of;
@@ -66,7 +66,7 @@ class EnumRegistryCompilerPass implements CompilerPassInterface
      */
     private function getSourceClassList(ContainerBuilder $container): array
     {
-        $sourceClasses = $container->getParameter(WakeappEnumerExtension::PARAMETER_SOURCE_CLASSES);
+        $sourceClasses = $container->getParameter(MarfatechEnumerExtension::PARAMETER_SOURCE_CLASSES);
 
         $finder = $this->getFinder($container);
 
@@ -94,8 +94,8 @@ class EnumRegistryCompilerPass implements CompilerPassInterface
      */
     private function getFinder(ContainerBuilder $container): Finder
     {
-        $sourceList = $container->getParameter(WakeappEnumerExtension::PARAMETER_SOURCES);
-        $container->getParameterBag()->remove(WakeappEnumerExtension::PARAMETER_SOURCES);
+        $sourceList = $container->getParameter(MarfatechEnumerExtension::PARAMETER_SOURCES);
+        $container->getParameterBag()->remove(MarfatechEnumerExtension::PARAMETER_SOURCES);
 
         $projectDir = $container->getParameter('kernel.project_dir');
 

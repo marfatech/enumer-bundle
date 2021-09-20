@@ -1,8 +1,8 @@
 services:
-    Wakeapp\Bundle\EnumerBundle\Registry\EnumRegistryService:
+    MarfaTech\Bundle\EnumerBundle\Registry\EnumRegistryService:
         public: true
         arguments:
             - []
-    wakeapp_enumer.enum_registry:
+    marfatech_enumer.enum_registry:
         public: true
-        alias: Wakeapp\Bundle\EnumerBundle\Registry\EnumRegistryService
+        alias: MarfaTech\Bundle\EnumerBundle\Registry\EnumRegistryService

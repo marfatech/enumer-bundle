@@ -1,4 +1,10 @@
 ## [Unreleased]
+## Changed
+- [BC BREAK] Refactoring namespace to `MarfaTech`.
+- [BC BREAK] Renamed root config `wakeapp_enumer` to `marfatech_enumer`.
+- [BC BREAK] Renamed service `wakeapp_enumer.enum_registry` to `wakeapp_enumer.enum_registry`.
+- [BC BREAK] Renamed parameter `wakeapp_enumer.source_directories` to `marfatech_enumer.source_directories`.
+- [BC BREAK] Renamed parameter `wakeapp_enumer.source_classes` to `marfatech_enumer.source_classes`.
 
 ## [1.2.1]
 ### Added
