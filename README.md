@@ -1,8 +1,8 @@
 Enumer Bundle
 =============
 
-[![Latest Stable Version](https://poser.pugx.org/wakeapp/enumer-bundle/v/stable)](https://packagist.org/packages/wakeapp/enumer-bundle)
-[![Total Downloads](https://poser.pugx.org/wakeapp/enumer-bundle/downloads)](https://packagist.org/packages/wakeapp/enumer-bundle)
+[![Latest Stable Version](https://poser.pugx.org/marfatech/enumer-bundle/v/stable)](https://packagist.org/packages/marfatech/enumer-bundle)
+[![Total Downloads](https://poser.pugx.org/marfatech/enumer-bundle/downloads)](https://packagist.org/packages/marfatech/enumer-bundle)
 
 Введение
 --------
@@ -98,7 +98,7 @@ use Acme\Enum\GenderEnum;
 use Symfony\Component\DependencyInjection\Container;
 
 /** @var Container $container */
-$enumerRegistry = $container->get('wakeapp_enumer.enum_registry');
+$enumerRegistry = $container->get('marfatech_enumer.enum_registry');
 
 $list = $enumerRegistry->getOriginalList(GenderEnum::class); 
 echo json_encode($list);// {"MALE":"Male","FEMALE":"Female"}

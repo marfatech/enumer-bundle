@@ -1,5 +1,9 @@
 ## [Unreleased]
 ## Changed
+- Updated `php` with pattern version `~7.4||~8.0`.
+- Updated composer name `wakeapp/enumer-bundle` to `marfatech/enumer-bundle`.
+- Updated composer name `wakeapp/enumer` to `marfatech/enumer`.
+- Updated `marfatech/enumer` with pattern version `^2.0`.
 - [BC BREAK] Refactoring namespace to `MarfaTech`.
 - [BC BREAK] Renamed root config `wakeapp_enumer` to `marfatech_enumer`.
 - [BC BREAK] Renamed service `wakeapp_enumer.enum_registry` to `wakeapp_enumer.enum_registry`.
