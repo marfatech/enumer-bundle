@@ -17,6 +17,7 @@ use Closure;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
+
 use function class_exists;
 use function is_dir;
 use function method_exists;

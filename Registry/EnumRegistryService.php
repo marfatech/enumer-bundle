@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace MarfaTech\Bundle\EnumerBundle\Registry;
 
 use MarfaTech\Component\Enumer\EnumRegistry;
+
 use function is_string;
 use function mb_strtolower;
 

@@ -13,13 +13,14 @@ declare(strict_types=1);
 
 namespace MarfaTech\Bundle\EnumerBundle\DependencyInjection\Compiler;
 
-use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Finder\Finder;
 use MarfaTech\Bundle\EnumerBundle\DependencyInjection\MarfatechEnumerExtension;
 use MarfaTech\Bundle\EnumerBundle\Enum\EnumInterface;
 use MarfaTech\Bundle\EnumerBundle\Registry\EnumRegistryService;
 use MarfaTech\Component\Enumer\EnumRegistry;
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\Finder\Finder;
+
 use function array_unique;
 use function get_declared_classes;
 use function is_subclass_of;
