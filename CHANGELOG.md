@@ -1,4 +1,6 @@
 ## [Unreleased]
+
+## [2.0.0] - 2021-10-21
 ## Changed
 - Updated `php` with pattern version `~7.4||~8.0`.
 - Updated composer name `wakeapp/enumer-bundle` to `marfatech/enumer-bundle`.
@@ -10,7 +12,7 @@
 - [BC BREAK] Renamed parameter `wakeapp_enumer.source_directories` to `marfatech_enumer.source_directories`.
 - [BC BREAK] Renamed parameter `wakeapp_enumer.source_classes` to `marfatech_enumer.source_classes`.
 
-## [1.2.1]
+## [1.2.1] - 2021-03-02
 ### Added
 - Support PHP ~8.0.
 
