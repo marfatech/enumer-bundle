@@ -1,22 +1,29 @@
 {
-    "name": "wakeapp/enumer-bundle",
+    "name": "marfatech/enumer-bundle",
     "description": "Provides possibility for work with ENUM without reflection usage on the runtime",
     "type": "symfony-bundle",
     "keywords": ["symfony-bundle", "enumer", "enum", "doctrine-enum-type", "doctrine"],
     "license": "MIT",
 
     "require": {
-        "php":                          "~7.1||~8.0",
+        "php":                          "~7.4||~8.0",
         "symfony/config":               "~3.4||~4.0||~5.0",
         "symfony/dependency-injection": "~3.4||~4.0||~5.0",
         "symfony/finder":               "~3.4||~4.0||~5.0",
         "symfony/http-kernel":          "~3.4||~4.0||~5.0",
-        "wakeapp/enumer":               "^1.0"
+        "marfatech/enumer":             "^2.0"
     },
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:marfatech/enumer.git"
+        }
+    ],
 
     "autoload": {
         "psr-4": {
-            "Wakeapp\\Bundle\\EnumerBundle\\": ""
+            "MarfaTech\\Bundle\\EnumerBundle\\": ""
         }
     }
 }

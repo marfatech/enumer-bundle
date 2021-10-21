@@ -1,8 +1,8 @@
 Enumer Bundle
 =============
 
-[![Latest Stable Version](https://poser.pugx.org/wakeapp/enumer-bundle/v/stable)](https://packagist.org/packages/wakeapp/enumer-bundle)
-[![Total Downloads](https://poser.pugx.org/wakeapp/enumer-bundle/downloads)](https://packagist.org/packages/wakeapp/enumer-bundle)
+[![Latest Stable Version](https://poser.pugx.org/marfatech/enumer-bundle/v/stable)](https://packagist.org/packages/marfatech/enumer-bundle)
+[![Total Downloads](https://poser.pugx.org/marfatech/enumer-bundle/downloads)](https://packagist.org/packages/marfatech/enumer-bundle)
 
 Введение
 --------
@@ -21,7 +21,7 @@ Enumer Bundle
 стабильной версии этого бандла:
 
 ```bash
-    composer require wakeapp/enumer-bundle
+    composer require marfatech/enumer-bundle
 ```
 *Эта команда подразумевает что [Composer](https://getcomposer.org) установлен и доступен глобально.*
 
@@ -42,7 +42,7 @@ class AppKernel extends Kernel
         $bundles = [
             // ...
 
-            new Wakeapp\Bundle\EnumerBundle\WakeappEnumerBundle(),
+            new MarfaTech\Bundle\EnumerBundle\MarfatechEnumerBundle(),
         ];
 
         return $bundles;
@@ -58,7 +58,7 @@ class AppKernel extends Kernel
 Чтобы начать использовать бандл предварительная конфигурация **не** требуется и имеет следующее значение по умолчанию:
 
 ```yaml
-wakeapp_enumer:
+marfatech_enumer:
     # список директорий, в которых будет происходить поиск классов, реализующих EnumInterface
     source_directories:
         - 'src'
@@ -77,7 +77,7 @@ wakeapp_enumer:
 
 namespace Acme\Enum;
 
-use Wakeapp\Bundle\EnumerBundle\Enum\EnumInterface;
+use MarfaTech\Bundle\EnumerBundle\Enum\EnumInterface;
 
 class GenderEnum implements EnumInterface
 {
@@ -87,7 +87,7 @@ class GenderEnum implements EnumInterface
 ```
 
 Все классы, реализующие [EnumInterface](./Enum/EnumInterface.php), будут доступны для работы с ними в сервисе
-`wakeapp_enumer.enum_registry` (также сервис доступен при вызове посредством `autowire`). 
+`marfatech_enumer.enum_registry` (также сервис доступен при вызове посредством `autowire`). 
 
 ```php
 <?php declare(strict_types=1);
@@ -98,7 +98,7 @@ use Acme\Enum\GenderEnum;
 use Symfony\Component\DependencyInjection\Container;
 
 /** @var Container $container */
-$enumerRegistry = $container->get('wakeapp_enumer.enum_registry');
+$enumerRegistry = $container->get('marfatech_enumer.enum_registry');
 
 $list = $enumerRegistry->getOriginalList(GenderEnum::class); 
 echo json_encode($list);// {"MALE":"Male","FEMALE":"Female"}
@@ -135,7 +135,7 @@ class VendorGenderEnum
 Чтобы зарегистрировать этот класс необходимо добавить его в массив `source_classes`:
 
 ```yaml
-wakeapp_enumer:
+marfatech_enumer:
     source_classes:
         - Vendor\Acme\Enum\VendorGenderEnum
 ``` 
