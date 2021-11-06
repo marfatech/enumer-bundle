@@ -3,6 +3,6 @@ services:
         public: true
         arguments:
             - []
-    marfatech_enumer.enum_registry:
+    marfa_tech_enumer.enum_registry:
         public: true
         alias: MarfaTech\Bundle\EnumerBundle\Registry\EnumRegistryService

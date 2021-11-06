@@ -1,4 +1,10 @@
 ## [Unreleased]
+## Changed
+- Renamed prefix bundle and extension names `Marfatech` to `MarfaTech`.
+- Renamed root config `marfatech_enumer` to `marfa_tech_enumer`.
+- Renamed service `marfatech_enumer.enum_registry` to `marfa_tech_enumer.enum_registry`.
+- Renamed parameter `marfatech_enumer.source_directories` to `marfa_tech_enumer.source_directories`.
+- Renamed parameter `marfatech_enumer.source_classes` to `marfa_tech_enumer.source_classes`.
 
 ## [2.0.0] - 2021-10-21
 ## Changed
