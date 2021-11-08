@@ -43,13 +43,13 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('marfatech_enumer');
+        $treeBuilder = new TreeBuilder('marfa_tech_enumer');
 
         if (method_exists($treeBuilder, 'getRootNode')) {
             $rootNode = $treeBuilder->getRootNode();
         } else {
             // BC layer for symfony/config 4.1 and older
-            $rootNode = $treeBuilder->root('marfatech_enumer');
+            $rootNode = $treeBuilder->root('marfa_tech_enumer');
         }
 
         $rootNode

@@ -42,7 +42,7 @@ class AppKernel extends Kernel
         $bundles = [
             // ...
 
-            new MarfaTech\Bundle\EnumerBundle\MarfatechEnumerBundle(),
+            new MarfaTech\Bundle\EnumerBundle\MarfaTechEnumerBundle(),
         ];
 
         return $bundles;
@@ -58,7 +58,7 @@ class AppKernel extends Kernel
 Чтобы начать использовать бандл предварительная конфигурация **не** требуется и имеет следующее значение по умолчанию:
 
 ```yaml
-marfatech_enumer:
+marfa_tech_enumer:
     # список директорий, в которых будет происходить поиск классов, реализующих EnumInterface
     source_directories:
         - 'src'
@@ -87,7 +87,7 @@ class GenderEnum implements EnumInterface
 ```
 
 Все классы, реализующие [EnumInterface](./Enum/EnumInterface.php), будут доступны для работы с ними в сервисе
-`marfatech_enumer.enum_registry` (также сервис доступен при вызове посредством `autowire`). 
+`marfa_tech_enumer.enum_registry` (также сервис доступен при вызове посредством `autowire`). 
 
 ```php
 <?php declare(strict_types=1);
@@ -98,7 +98,7 @@ use Acme\Enum\GenderEnum;
 use Symfony\Component\DependencyInjection\Container;
 
 /** @var Container $container */
-$enumerRegistry = $container->get('marfatech_enumer.enum_registry');
+$enumerRegistry = $container->get('marfa_tech_enumer.enum_registry');
 
 $list = $enumerRegistry->getOriginalList(GenderEnum::class); 
 echo json_encode($list);// {"MALE":"Male","FEMALE":"Female"}
@@ -135,7 +135,7 @@ class VendorGenderEnum
 Чтобы зарегистрировать этот класс необходимо добавить его в массив `source_classes`:
 
 ```yaml
-marfatech_enumer:
+marfa_tech_enumer:
     source_classes:
         - Vendor\Acme\Enum\VendorGenderEnum
 ``` 

@@ -17,7 +17,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use MarfaTech\Bundle\EnumerBundle\DependencyInjection\Compiler\EnumRegistryCompilerPass;
 
-class MarfatechEnumerBundle extends Bundle
+class MarfaTechEnumerBundle extends Bundle
 {
     /**
      * {@inheritdoc}

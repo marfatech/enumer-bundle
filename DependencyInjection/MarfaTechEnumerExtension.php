@@ -18,10 +18,10 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-class MarfatechEnumerExtension extends Extension
+class MarfaTechEnumerExtension extends Extension
 {
-    public const PARAMETER_SOURCES = 'marfatech_enumer.source_directories';
-    public const PARAMETER_SOURCE_CLASSES = 'marfatech_enumer.source_classes';
+    public const PARAMETER_SOURCES = 'marfa_tech_enumer.source_directories';
+    public const PARAMETER_SOURCE_CLASSES = 'marfa_tech_enumer.source_classes';
 
     /**
      * {@inheritdoc}

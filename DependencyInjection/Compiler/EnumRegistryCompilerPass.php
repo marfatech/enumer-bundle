@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace MarfaTech\Bundle\EnumerBundle\DependencyInjection\Compiler;
 
-use MarfaTech\Bundle\EnumerBundle\DependencyInjection\MarfatechEnumerExtension;
+use MarfaTech\Bundle\EnumerBundle\DependencyInjection\MarfaTechEnumerExtension;
 use MarfaTech\Bundle\EnumerBundle\Enum\EnumInterface;
 use MarfaTech\Bundle\EnumerBundle\Registry\EnumRegistryService;
 use MarfaTech\Component\Enumer\EnumRegistry;
@@ -67,7 +67,7 @@ class EnumRegistryCompilerPass implements CompilerPassInterface
      */
     private function getSourceClassList(ContainerBuilder $container): array
     {
-        $sourceClasses = $container->getParameter(MarfatechEnumerExtension::PARAMETER_SOURCE_CLASSES);
+        $sourceClasses = $container->getParameter(MarfaTechEnumerExtension::PARAMETER_SOURCE_CLASSES);
 
         $finder = $this->getFinder($container);
 
@@ -95,8 +95,8 @@ class EnumRegistryCompilerPass implements CompilerPassInterface
      */
     private function getFinder(ContainerBuilder $container): Finder
     {
-        $sourceList = $container->getParameter(MarfatechEnumerExtension::PARAMETER_SOURCES);
-        $container->getParameterBag()->remove(MarfatechEnumerExtension::PARAMETER_SOURCES);
+        $sourceList = $container->getParameter(MarfaTechEnumerExtension::PARAMETER_SOURCES);
+        $container->getParameterBag()->remove(MarfaTechEnumerExtension::PARAMETER_SOURCES);
 
         $projectDir = $container->getParameter('kernel.project_dir');
 
