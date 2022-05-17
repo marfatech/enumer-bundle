@@ -1,4 +1,6 @@
 ## [Unreleased]
+
+## [2.1.0] - 2022-05-17
 ### Added
 - Symfony 6 support
 ### Changed
